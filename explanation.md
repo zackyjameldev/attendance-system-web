@@ -23,7 +23,7 @@ Mashruucan waa nidaam loogu talagalay maamulka xaadiriska ardayda, wuxuuna ka ko
 * Expo SecureStore
 * React Native StyleSheet
 
-**Shaqaalaha Ugu Muhiimsan:**
+**Shaqooyinka Ugu Muhiimsan:**
 
 **Macalimiinta:**
 
@@ -52,7 +52,7 @@ Mashruucan waa nidaam loogu talagalay maamulka xaadiriska ardayda, wuxuuna ka ko
 * NextAuth.js
 * Tailwind CSS
 
-**Shaqaalaha Ugu Muhiimsan:**
+**Shaqooyinka Ugu Muhiimsan:**
 
 **Maamulaha (Administrator):**
 
@@ -184,8 +184,4 @@ npm run dev
 2. **Khaladka Authentication**: Nadiifi xogta app-ka oo login mar kale samee
 3. **Xogta ma muuqato**: Hubi in isticmaaluhu leeyahay role sax ah
 
----
 
-Haddii aad rabto, waxaan ku sameyn karaa **version-ka markdown oo kooban oo aad si toos ah ugu isticmaali karto README GitHub**, oo leh **headings iyo bullets habeysan** oo fudud in la akhriyo.
-
-Ma jeclaan lahayd inaan sidaas u sameeyo?
