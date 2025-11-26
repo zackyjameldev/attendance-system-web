@@ -1,6 +1,4 @@
-Halkan waxaan ku saxay markdown-kaaga si uu u noqdo Somali saafi ah oo macquul ah, lagana saaray erayo “robotic” ama aan sax ahayn. Waxaan isku dayay in qoraalka uu noqdo mid fudud, hufan, oo la fahmi karo:
 
----
 
 # Mashruuca Attendance System - Qeexid iyo Tilmaamo
 
