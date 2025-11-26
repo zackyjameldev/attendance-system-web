@@ -1,138 +1,165 @@
-# ATA (Attendance System)
+# Mashruuca Attendance System - Qeexid iyo Tilmaamaha
 
-## Hordhac
+## Horudhac (Introduction)
 
-Mashruucan Nidaamka ATS (Attendance-System) waa nidaam loogu talagalay maamulida attendanciyada ardayda jaamacadeed. Waxa uu ka kooban yahay laba qaybood:
+Mashruucan waa nidaam hore u socodka ardayda oo ka kooban laba qaybood:
 
-1. **App-ka Mobile** (React Native Expo) - loogu talagalay macalimiinta iyo ardayda
-2. **Dashboard-ka Web** (Next.js) - loogu talagalay maamulayaasha
+1. **Mobile App** - loo isticmaalo macalimiinta iyo ardayda
+2. **Web Dashboard** - maamulka nidaamka
 
-## Qaybta Mobile (App-ka Taleefanka)
+## Qaybaha Mashruuca
 
-### Farsamada (Tech Stack) La Isticmaalo
+### 1. Mobile App (React Native Expo)
 
-- **Qaab-dhismeedka**: React Native with Expo 52
-- **Luuqada**: JavaScript
-- **Habi-bixinta**: React Navigation
-- **Kaydinta**: Expo SecureStore
-- **Qurxinta**: React Native StyleSheet
+**Ujeeddo:** Macalimiinta waxay ku dhejiyaan hore u socodka, ardayduna waxay eegi karaan natiijooyinkooda.
 
-### Habka Shaqada App-ka
+**Tiknoolajiyada la isticmaalo:**
+- React Native Expo 52
+- JavaScript
+- React Navigation
+- Expo SecureStore
+- React Native StyleSheet
 
-#### Macallimiinta:
-1. **Soo gal** → Guri-ga Macallinka (Liiska Fields-ka)
-2. **Dooro Field** → Liiska Subjects-ka
-3. **Dooro Subject** → Liiska ATS (Attendance-System)
-4. **Dooro ATS (Attendance-System) Firfircoon** → Calaamadee ATS (Attendance-System) (Liiska Ardayda)
+**Qaybaha Ugu Muhiimsan:**
 
-#### Ardayda:
-1. **Soo gal** → Guri-ga Ardayga (Dulmarka ATS (Attendance-System))
-2. **Eeg dhammaan subjects-ka** iyo tirakoobka ATS (Attendance-System)
+**Macalimiinta:**
+- Gelitaan (login)
+- Eeggo qaybaha ay wax bartaan
+- Eeggo maadooyinka
+- Eeggo dhammaan hore u socodka
+- Ku dheji hore u socodka ardayda (waqti la xaddiday)
 
-### Astaamaha Muhiimka ah
+**Ardayda:**
+- Gelitaan (login)
+- Eeggo natiijooyinka hore u socodka
+- Eeggo tirada maalmaha hore u socodka iyo aan hore u socodin
 
-- Macallimiinta waxay calaamadeeyaan ATS (Attendance-System) waqtiyada firfircoon ee maanta
-- Ardaydu waxay aragtaan natiijooyinka ATS (Attendance-System) iyo heerarka guulaynta
-- App-ku wuxuu xasuusinayaa tokenka isticmaaleha si aan mar walba loogu baahnayn in lagu soo galo
+### 2. Web Dashboard (Next.js)
 
-## Qaybta Web (Dashboard-ka Maamulka)
+**Ujeeddo:** Maamulka nidaamka oo dhan - lagu maamulo isticmaalayaasha, qaybaha, maadooyinka, iyo hore u socodka.
 
-### Farsamada (Tech Stack) La Isticmaalo
+**Tiknoolajiyada la isticmaalo:**
+- Next.js 14
+- TypeScript
+- MongoDB
+- Prisma ORM
+- NextAuth.js
+- Tailwind CSS
 
-- **Qaab-dhismeedka**: Next.js 14 (App Router)
-- **Luuqada**: TypeScript
-- **Macluumaadka**: MongoDB
-- **Maareeynta Database**: Prisma
-- **Xaqiijinta**: NextAuth.js
-- **Qurxinta**: Tailwind CSS
+**Guryaha Ugu Muhiimsan:**
 
-### Waaxyaha API-ga (Endpoints)
+**Maamulaha (Administrator):**
+- Maamul isticmaalayaasha (dhig, bedel, tir)
+- Maamul qaybaha (fields)
+- Maamul maadooyinka (subjects)
+- Maamul hore u socodka (attendances)
+- Eeggo dhammaan ardayda
 
-#### Maamulayaasha (Administrators):
+**Macalimiinta (Web):**
+- Eeggo hore u socodka firfircoon
+- Ku dheji hore u socodka ardayda
 
-- **Maareeynta Isticmaalayaasha**: Abuur, eeg, cusbooneysii isticmaalayaasha
-- **Maareeynta Fields-ka**: Abuur fields cusub (tusaale: Software Engineering)
-- **Maareeynta Subjects-ka**: Abuur subjects-ka fields kasta
-- **Maareeynta ATS (Attendance-System)**: Deji maalmo, waqtiyo, iyo ardayda ATS (Attendance-System)
+## Sida uu Nidaamku U Shaqeeyo
 
-#### Macallimiinta:
+### Flow-ga Mobile App
 
-- **Eeg ATS (Attendance-System) Firfircoon**: Arag ATS (Attendance-System) maanta
-- **Calaamadee Ardayda**: Beddel xaaladda ATS (Attendance-System) ardayda
+**Macalimka:**
+1. Login → Guri Macalimka (Liiska Qaybaha)
+2. Dooro Qayb → Liiska Maadooyinka
+3. Dooro Maado → Liiska Hore u Socodka
+4. Dooro Hore u Socodka Firfircoon → Ku Dheji Hore u Socodka (Liiska Ardayda)
 
-#### Ardayda:
+**Ardayga:**
+1. Login → Guri Ardayga (Dulmarka Hore u Socodka)
+2. Eeggo dhammaan maadooyinka iyo natiijooyinka
 
-- **Eeg Natiijooyinka**: Arag tirada maalmaha huzirtay iyo maalmaha aanad huzirin
+### Flow-ga Web Dashboard
 
-## Habka Shaqada Nidaamka
+**Maamulaha:**
+- Login → Dashboard Maamulka
+- Maamul isticmaalayaasha, qaybaha, maadooyinka, hore u socodka
 
-### 1. Diyaarinta ATS (Attendance-System) (Maamulaha)
-```
-Maamulaha → Abuur Field → Abuur Subject → U qoondee Macallin → Deji ATS (Attendance-System)
-```
+**Macalimka (Web):**
+- Login → Dashboard Macalimka
+- Eeggo hore u socodka firfircoon iyo ku dheji hore u socodka
 
-### 2. Calaamadeynta ATS (Attendance-System) (Macallinka)
-```
-Macallinka → Dooro Field → Dooro Subject → Dooro Iskaashig → Calaamadee Ardayda
-```
+## Database iyo API
 
-### 3. Eegista Natiijooyinka (Ardayga)
-```
-Ardayga → Eeg dhammaan subjects-ka → Arag heerarka ATS (Attendance-System)
-```
+### Qaabka Database-ka
+- **User**: Isiticmaalayaasha (Maamulaha, Macalim, Arday)
+- **Field**: Qaybaha (Tusaale: Software Engineering)
+- **Subject**: Maadooyinka (Tusaale: Database Systems)
+- **Attendance**: Hore u Socodka
+- **AttendanceRecord**: Diiwaanka hore u socodka arday kasta
 
-## Qaab-dhismeedka Database-ka
+### API Endpoints
 
-### Models-ka Muhiimka ah:
+**Authentication:**
+- `POST /api/auth/login` - Web login
+- `POST /api/auth/mobile-login` - Mobile login
 
-- **User**: Isiticmaalayaasha (Maamulaha, Macallin, Arday)
-- **Field**: Qaybaha jaamacadda (tusaale: Software Engineering)
-- **Subject**: Koorsada fields kasta (tusaale: Database Systems)
-- **Attendance**: ATS (Attendance-System) subjects kasta
-- **AttendanceRecord**: Diiwaanka ATS (Attendance-System) arday kasta
+**Maamulaha:**
+- `GET/POST /api/admin/users` - Maamul isticmaalayaasha
+- `GET/POST /api/admin/fields` - Maamul qaybaha
+- `GET/POST /api/admin/subjects` - Maamul maadooyinka
+- `GET/POST /api/admin/attendances` - Maamul hore u socodka
 
-## Habka Rakibaadda
+**Macalimiinta:**
+- `GET /api/teacher/attendances` - Eeggo hore u socodka
+- `POST /api/teacher/attendances/[id]/mark` - Ku dheji hore u socodka
 
-### App-ka Mobile:
+**Ardayda:**
+- `GET /api/student/attendance` - Eeggo natiijooyinka
+
+## Sida loo Cusbooneysiiyo
+
+### Mobile App
 ```bash
 cd mobile
 npm install
-# Beddel API_BASE_URL constants/config.js
+# Bedel API_BASE_URL constants/config.js
 npm start
 ```
 
-### Dashboard-ka Web:
+### Web Dashboard
 ```bash
 cd web
 npm install
 # Samee .env file
+npm run prisma:generate
 npm run prisma:migrate
 npm run dev
 ```
 
-## Astaamaha Ugu Muhiimsan
+## Muhiimka ah ee la Ogaado
 
-1. **Kala saarista Doorka**: Maamulaha, Macallinka, iyo Ardayga waxay leeyihiin gacmo furasho kala duwan
-2. **Xaqiijinta**: Isticmaalayaashu waa inay yihiin kuwo la xaqiijiyay
-3. **Waqtiga ATS (Attendance-System)**: Iskaashigu wuxuu firfircoon yahay waqti gaar ah oo maalinta ah
-4. **Kaydinta Ammaan ah**: Tokenka waa la kaydiyaa si ammaan ah SecureStore-ka
-5. **Isdhexgalka API-ga**: App-ka mobile iyo dashboard-ka web waxay isticmaalaan API isku mid ah
+1. **Authentication**: Mobile app waxay isticmaashaa token, webka waxaa isticmaala sessions
+2. **Waqtiga Hore u Socodka**: Macalimiinta waxay ku dhejiyaan hore u socodka maanta oo waqtiga uu firfircoon yahay
+3. **Xaddidaadka**: Arday kasta wuxuu arkaa natiijooyinkiisa kaliya, macalimku wuxuu arkaa ardaydiisa
+4. **Security**: Dhammaan xogta waa la ilaaliyaa, authentication ayaa loo baahanahay
 
 ## Tusaalooyinka Isticmaalka
 
-### Macallin:
-"Waxaan dooranayaa qaybta Software Engineering, ka dib waxaan dooranayaa koorsada Database Systems, waxaana ardayda u calaamadeynayaa ATS (Attendance-System) maanta 9:00 ilaa 12:00."
+**Macalimka:**
+- Login mobile app-ka
+- Dooro qaybta iyo maadada
+- Eeggo hore u socodka firfircoon
+- Ku dheji hore u socodka ardayda
 
-### Arday:
-"Waxaan arki karaa inaan huzirtay 8 maalmood oo 10 ka mid ah koorsada Database Systems, taasoo 80% u dhiganta."
+**Ardayga:**
+- Login mobile app-ka
+- Eeggo natiijooyinka hore u socodka dhammaan maadooyinka
 
-### Maamulaha:
-"Waxaan abuuri karaa field cusub, ugu darsan karaa macallimiin iyo arday, dejin karaa waqtiyada ATS (Attendance-System)."
+**Maamulaha:**
+- Login web dashboard-ka
+- Abuur isticmaalayaasha cusub
+- Maamul qaybaha iyo maadooyinka
+- Abuur hore u socodka cusub
 
-## Dhibaatooyinka Caadiga ah iyo Qaabaha Laga Xaliyo
+## Xalinta Dhibaatooyinka Caadiga ah
 
-1. **Khaladka Shabakada**: Hubi in API_BASE_URL sax yahay
-2. **Dhibaatooyinka Xaqiijinta**: Casri data-da app-ka oo isku day inaad mar kale soo gasho
-3. **Macluumaadka aan muuqan**: Hubi in isticmaalehu uu leeyahay doorka saxda ah
+1. **Khaladka Network**: Hubi in API_BASE_URL sax yahay
+2. **Qaladka Authentication**: Nadiif xogta app-ka oo login mar kale
+3. **Xogta ma muuqato**: Hubi in isticmaalaha uu leeyahay role sax ah
 
-Mashruucan waa mid loogu talagalay in uu fududeeyo maareeynta ATS (Attendance-System) jaamacadeed, isagoo adeegsanaya farsamada casriga ah oo mobile iyo web isku xira.
+Mashruucan waa nidaam buuxa oo hore u socodka ardayda loo maareeyo, waxaana loo qorsheeyay in uu fududeeyo hawsha macalimiinta iyo in ardaydu si fudud ugu ogaadaan hore u socodkooda.
