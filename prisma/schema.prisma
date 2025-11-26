@@ -1,0 +1,107 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMINISTRATOR
+  TEACHER
+  STUDENT
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  password  String
+  name      String
+  role      UserRole
+  fieldId   String?  @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  field Field? @relation(fields: [fieldId], references: [id])
+
+  // Relations
+  taughtSubjects Subject[] @relation("TeacherSubjects")
+  attendances    Attendance[]
+  attendanceRecords AttendanceRecord[]
+
+  @@map("users")
+}
+
+model Field {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  users     User[]
+  subjects  Subject[]
+  attendances Attendance[]
+
+  @@map("fields")
+}
+
+model Subject {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  fieldId   String   @db.ObjectId
+  teacherId String   @db.ObjectId
+  year      Int      // e.g., 1, 2, 3, 4
+  term      Int      // e.g., 1, 2
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  field    Field  @relation(fields: [fieldId], references: [id])
+  teacher  User   @relation("TeacherSubjects", fields: [teacherId], references: [id])
+  attendances Attendance[]
+
+  @@unique([name, fieldId, year, term])
+  @@map("subjects")
+}
+
+model Attendance {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  fieldId     String   @db.ObjectId
+  subjectId   String   @db.ObjectId
+  teacherId   String   @db.ObjectId
+  numberOfDays Int
+  dates       String[] // Array of date strings
+  timeStart   String   // e.g., "09:00"
+  timeEnd     String   // e.g., "12:00"
+  studentIds  String[] @db.ObjectId // Array of student IDs
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  field    Field    @relation(fields: [fieldId], references: [id])
+  subject  Subject  @relation(fields: [subjectId], references: [id])
+  teacher  User     @relation(fields: [teacherId], references: [id])
+  records  AttendanceRecord[]
+
+  @@map("attendances")
+}
+
+model AttendanceRecord {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  attendanceId String   @db.ObjectId
+  studentId    String   @db.ObjectId
+  date         String   // Date string in format YYYY-MM-DD
+  isPresent    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  attendance Attendance @relation(fields: [attendanceId], references: [id])
+  student    User       @relation(fields: [studentId], references: [id])
+
+  @@unique([attendanceId, studentId, date])
+  @@map("attendance_records")
+}
+
