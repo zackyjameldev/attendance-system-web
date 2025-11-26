@@ -1,127 +1,148 @@
-# Mashruuca Attendance System - Qeexid iyo Tilmaamaha
+Halkan waxaan ku saxay markdown-kaaga si uu u noqdo Somali saafi ah oo macquul ah, lagana saaray erayo “robotic” ama aan sax ahayn. Waxaan isku dayay in qoraalka uu noqdo mid fudud, hufan, oo la fahmi karo:
 
-## Horudhac (Introduction)
+---
 
-Mashruucan waa nidaam hore u socodka ardayda oo ka kooban laba qaybood:
+# Mashruuca Attendance System - Qeexid iyo Tilmaamo
 
-1. **Mobile App** - loo isticmaalo macalimiinta iyo ardayda
-2. **Web Dashboard** - maamulka nidaamka
+## Horudhac
+
+Mashruucan waa nidaam loogu talagalay maamulka xaadiriska ardayda, wuxuuna ka kooban yahay laba qaybood:
+
+1. **Mobile App** – loo isticmaalo macalimiinta iyo ardayda
+2. **Web Dashboard** – maamulka guud ee nidaamka
 
 ## Qaybaha Mashruuca
 
 ### 1. Mobile App (React Native Expo)
 
-**Ujeeddo:** Macalimiinta waxay ku dhejiyaan hore u socodka, ardayduna waxay eegi karaan natiijooyinkooda.
+**Ujeeddo:** Macalimiinta waxay ku diiwaan gelinkaraan xaadiriska ardayda, halka ardaydu ay ka eegi karaan natiijooyinkooda.
 
-**Tiknoolajiyada la isticmaalo:**
-- React Native Expo 52
-- JavaScript
-- React Navigation
-- Expo SecureStore
-- React Native StyleSheet
+**Tiknoolajiyada la isticmaalayo:**
 
-**Qaybaha Ugu Muhiimsan:**
+* React Native Expo 52
+* JavaScript
+* React Navigation
+* Expo SecureStore
+* React Native StyleSheet
+
+**Shaqaalaha Ugu Muhiimsan:**
 
 **Macalimiinta:**
-- Gelitaan (login)
-- Eeggo qaybaha ay wax bartaan
-- Eeggo maadooyinka
-- Eeggo dhammaan hore u socodka
-- Ku dheji hore u socodka ardayda (waqti la xaddiday)
+
+* Galitaanka (login)
+* Eegista qaybaha ay wax bartaan
+* Eegista maadooyinka
+* Eegista dhammaan xaadiriska
+* Ku diiwaangelinta xaadiriska ardayda (waqti go’an)
 
 **Ardayda:**
-- Gelitaan (login)
-- Eeggo natiijooyinka hore u socodka
-- Eeggo tirada maalmaha hore u socodka iyo aan hore u socodin
+
+* Galitaanka (login)
+* Eegista natiijooyinka xaadiriska
+* Eegista tirada maalmaha xaadirka iyo maqnaanshaha
 
 ### 2. Web Dashboard (Next.js)
 
-**Ujeeddo:** Maamulka nidaamka oo dhan - lagu maamulo isticmaalayaasha, qaybaha, maadooyinka, iyo hore u socodka.
+**Ujeeddo:** Maamulka nidaamka oo dhan – maamul isticmaalayaasha, qaybaha, maadooyinka, iyo xaadiriska.
 
-**Tiknoolajiyada la isticmaalo:**
-- Next.js 14
-- TypeScript
-- MongoDB
-- Prisma ORM
-- NextAuth.js
-- Tailwind CSS
+**Tiknoolajiyada la isticmaalayo:**
 
-**Guryaha Ugu Muhiimsan:**
+* Next.js 14
+* TypeScript
+* MongoDB
+* Prisma ORM
+* NextAuth.js
+* Tailwind CSS
+
+**Shaqaalaha Ugu Muhiimsan:**
 
 **Maamulaha (Administrator):**
-- Maamul isticmaalayaasha (dhig, bedel, tir)
-- Maamul qaybaha (fields)
-- Maamul maadooyinka (subjects)
-- Maamul hore u socodka (attendances)
-- Eeggo dhammaan ardayda
+
+* Maamul isticmaalayaasha (ku dar, beddel, tirtir)
+* Maamul qaybaha (fields)
+* Maamul maadooyinka (subjects)
+* Maamul xaadiriska (attendances)
+* Eegista dhammaan ardayda
 
 **Macalimiinta (Web):**
-- Eeggo hore u socodka firfircoon
-- Ku dheji hore u socodka ardayda
 
-## Sida uu Nidaamku U Shaqeeyo
+* Eegista xaadiriska firfircoon
+* Ku diiwaangelinta xaadiriska ardayda
+
+## Sida Nidaamku U Shaqeeyo
 
 ### Flow-ga Mobile App
 
-**Macalimka:**
-1. Login → Guri Macalimka (Liiska Qaybaha)
+**Macalinka:**
+
+1. Login → Guri Macalinka (Liiska Qaybaha)
 2. Dooro Qayb → Liiska Maadooyinka
-3. Dooro Maado → Liiska Hore u Socodka
-4. Dooro Hore u Socodka Firfircoon → Ku Dheji Hore u Socodka (Liiska Ardayda)
+3. Dooro Maado → Liiska Xaadiriska
+4. Dooro Xaadiriska Firfircoon → Ku Diiwaangelinta Xaadiriska Ardayda
 
 **Ardayga:**
-1. Login → Guri Ardayga (Dulmarka Hore u Socodka)
-2. Eeggo dhammaan maadooyinka iyo natiijooyinka
+
+1. Login → Guri Ardayga (Dulmarka Xaadiriska)
+2. Eeg dhammaan maadooyinka iyo natiijooyinka
 
 ### Flow-ga Web Dashboard
 
 **Maamulaha:**
-- Login → Dashboard Maamulka
-- Maamul isticmaalayaasha, qaybaha, maadooyinka, hore u socodka
 
-**Macalimka (Web):**
-- Login → Dashboard Macalimka
-- Eeggo hore u socodka firfircoon iyo ku dheji hore u socodka
+* Login → Dashboard Maamulka
+* Maamul isticmaalayaasha, qaybaha, maadooyinka, iyo xaadiriska
+
+**Macalinka (Web):**
+
+* Login → Dashboard Macalinka
+* Eegista xaadiriska firfircoon iyo ku diiwaangelinta ardayda
 
 ## Database iyo API
 
 ### Qaabka Database-ka
-- **User**: Isiticmaalayaasha (Maamulaha, Macalim, Arday)
-- **Field**: Qaybaha (Tusaale: Software Engineering)
-- **Subject**: Maadooyinka (Tusaale: Database Systems)
-- **Attendance**: Hore u Socodka
-- **AttendanceRecord**: Diiwaanka hore u socodka arday kasta
+
+* **User**: Isticmaalayaasha (Maamulaha, Macalin, Arday)
+* **Field**: Qaybaha (Tusaale: Software Engineering)
+* **Subject**: Maadooyinka (Tusaale: Database Systems)
+* **Attendance**: Xaadiriska
+* **AttendanceRecord**: Diiwaanka xaadiriska arday kasta
 
 ### API Endpoints
 
 **Authentication:**
-- `POST /api/auth/login` - Web login
-- `POST /api/auth/mobile-login` - Mobile login
+
+* `POST /api/auth/login` - Login Web
+* `POST /api/auth/mobile-login` - Login Mobile
 
 **Maamulaha:**
-- `GET/POST /api/admin/users` - Maamul isticmaalayaasha
-- `GET/POST /api/admin/fields` - Maamul qaybaha
-- `GET/POST /api/admin/subjects` - Maamul maadooyinka
-- `GET/POST /api/admin/attendances` - Maamul hore u socodka
+
+* `GET/POST /api/admin/users` - Maamul isticmaalayaasha
+* `GET/POST /api/admin/fields` - Maamul qaybaha
+* `GET/POST /api/admin/subjects` - Maamul maadooyinka
+* `GET/POST /api/admin/attendances` - Maamul xaadiriska
 
 **Macalimiinta:**
-- `GET /api/teacher/attendances` - Eeggo hore u socodka
-- `POST /api/teacher/attendances/[id]/mark` - Ku dheji hore u socodka
+
+* `GET /api/teacher/attendances` - Eegista xaadiriska
+* `POST /api/teacher/attendances/[id]/mark` - Ku diiwaangelinta xaadiriska
 
 **Ardayda:**
-- `GET /api/student/attendance` - Eeggo natiijooyinka
+
+* `GET /api/student/attendance` - Eegista natiijooyinka
 
 ## Sida loo Cusbooneysiiyo
 
 ### Mobile App
+
 ```bash
 cd mobile
 npm install
-# Bedel API_BASE_URL constants/config.js
+# Bedel API_BASE_URL ee constants/config.js
 npm start
 ```
 
 ### Web Dashboard
+
 ```bash
 cd web
 npm install
@@ -131,35 +152,42 @@ npm run prisma:migrate
 npm run dev
 ```
 
-## Muhiimka ah ee la Ogaado
+## Xog Muhiim ah
 
-1. **Authentication**: Mobile app waxay isticmaashaa token, webka waxaa isticmaala sessions
-2. **Waqtiga Hore u Socodka**: Macalimiinta waxay ku dhejiyaan hore u socodka maanta oo waqtiga uu firfircoon yahay
-3. **Xaddidaadka**: Arday kasta wuxuu arkaa natiijooyinkiisa kaliya, macalimku wuxuu arkaa ardaydiisa
-4. **Security**: Dhammaan xogta waa la ilaaliyaa, authentication ayaa loo baahanahay
+1. **Authentication**: Mobile app waxay isticmaashaa token, web app-na waxay isticmaashaa sessions
+2. **Xaadiriska**: Macalimiinta waxay ku diiwaangelin karaan xaadiriska maanta oo waqtigiisu firfircoon yahay
+3. **Xaddidaad**: Ardaygu wuxuu arki karaa kaliya natiijooyinkiisa, macalinku wuxuu arki karaa ardaydiisa
+4. **Security**: Dhammaan xogta waa la ilaaliyaa, authentication ayaa loo baahan yahay
 
 ## Tusaalooyinka Isticmaalka
 
-**Macalimka:**
-- Login mobile app-ka
-- Dooro qaybta iyo maadada
-- Eeggo hore u socodka firfircoon
-- Ku dheji hore u socodka ardayda
+**Macalinka:**
+
+* Login Mobile App-ka
+* Dooro Qaybta iyo Maadada
+* Eegista xaadiriska firfircoon
+* Ku diiwaangelinta xaadiriska ardayda
 
 **Ardayga:**
-- Login mobile app-ka
-- Eeggo natiijooyinka hore u socodka dhammaan maadooyinka
+
+* Login Mobile App-ka
+* Eegista natiijooyinka dhammaan maadooyinka
 
 **Maamulaha:**
-- Login web dashboard-ka
-- Abuur isticmaalayaasha cusub
-- Maamul qaybaha iyo maadooyinka
-- Abuur hore u socodka cusub
+
+* Login Web Dashboard-ka
+* Abuur isticmaalayaal cusub
+* Maamul qaybaha iyo maadooyinka
+* Abuur xaadiriska cusub
 
 ## Xalinta Dhibaatooyinka Caadiga ah
 
 1. **Khaladka Network**: Hubi in API_BASE_URL sax yahay
-2. **Qaladka Authentication**: Nadiif xogta app-ka oo login mar kale
-3. **Xogta ma muuqato**: Hubi in isticmaalaha uu leeyahay role sax ah
+2. **Khaladka Authentication**: Nadiifi xogta app-ka oo login mar kale samee
+3. **Xogta ma muuqato**: Hubi in isticmaaluhu leeyahay role sax ah
 
-Mashruucan waa nidaam buuxa oo hore u socodka ardayda loo maareeyo, waxaana loo qorsheeyay in uu fududeeyo hawsha macalimiinta iyo in ardaydu si fudud ugu ogaadaan hore u socodkooda.
+---
+
+Haddii aad rabto, waxaan ku sameyn karaa **version-ka markdown oo kooban oo aad si toos ah ugu isticmaali karto README GitHub**, oo leh **headings iyo bullets habeysan** oo fudud in la akhriyo.
+
+Ma jeclaan lahayd inaan sidaas u sameeyo?
