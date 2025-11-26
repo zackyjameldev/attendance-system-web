@@ -1,4 +1,4 @@
-# (Attendance System) 
+# ATA (Attendance System)
 
 ## Hordhac
 
